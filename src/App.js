@@ -1,12 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import AlertProvider from './alert/AlertProvider';
+import AlertProvider from './components/alert/AlertProvider';
+import Button from './components/button/button';
 
 function App() {
   return (
     <div className='App'>
       <AlertProvider>
-        <p>Hello World 2</p>
+        <Button />
       </AlertProvider>
     </div>
   );

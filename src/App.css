@@ -71,3 +71,30 @@
 .info .bar {
   background-color: darkblue;
 }
+
+.btn {
+  display: flex;
+  margin-bottom: 1rem;
+  padding: 1rem 1.4rem;
+  outline: none;
+  border-radius: 4px;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.1);
+  border: none;
+  color: white;
+}
+
+.btn-success {
+  background-color: green;
+}
+
+.btn-error {
+  background-color: darkred;
+}
+
+.btn-warning {
+  background-color: orange;
+}
+
+.btn-info {
+  background-color: blue;
+}
