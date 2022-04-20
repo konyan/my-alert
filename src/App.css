@@ -1,38 +1,73 @@
-.App {
-  text-align: center;
+.alert-wrapper {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  width: 300px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.alert-item {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  cursor: pointer;
+  animation: SlideLeft 0.5s;
+  animation-fill-mode: forwards;
+  width: 100%;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.alert-item.exit {
+  animation: SlideRight 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.alert-item .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.4rem;
+}
+
+@keyframes SlideLeft {
+  0% {
+    margin-left: 120%;
+  }
+
+  100% {
+    margin-left: 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@keyframes SlideRight {
+  0% {
+    margin-left: 0%;
+  }
+
+  100% {
+    margin-left: 120%;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.alert-item p {
+  padding: 0.6rem 0.4rem 0.4rem;
+  margin: 0.4rem 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.alert-item .bar {
+  height: 0.3rem;
+}
+
+.success .bar {
+  background-color: green;
+}
+
+.error .bar {
+  background-color: darkred;
+}
+
+.warning .bar {
+  background-color: orange;
+}
+
+.info .bar {
+  background-color: darkblue;
 }
