@@ -1,6 +1,8 @@
-import { useReducer, useState } from 'react';
+import { createContext, useReducer } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import Alert from './Alert';
+
+export const AlertContext = createContext();
 
 const AlertProvider = (props) => {
   const [state, dispatch] = useReducer(
@@ -55,14 +57,14 @@ const AlertProvider = (props) => {
   // });
 
   return (
-    <div>
+    <AlertContext.Provider value={dispatch}>
       <div className='alert-wrapper'>
         {state.map((alert) => (
           <Alert {...alert} key={alert.id} dispatch={dispatch} />
         ))}
       </div>
       {props.children}
-    </div>
+    </AlertContext.Provider>
   );
 };
 
