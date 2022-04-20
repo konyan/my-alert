@@ -98,3 +98,12 @@
 .btn-info {
   background-color: blue;
 }
+
+.input {
+  display: flex;
+  margin: 1rem;
+}
+
+.select {
+  margin: 1rem;
+}
