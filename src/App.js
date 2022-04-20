@@ -1,13 +1,13 @@
 import './App.css';
-import AlertProvider from './components/alert/AlertProvider';
+import AlertManager from './components/alert/AlertManager';
 import Button from './components/button/button';
 
 function App() {
   return (
     <div className='App'>
-      <AlertProvider>
+      <AlertManager>
         <Button />
-      </AlertProvider>
+      </AlertManager>
     </div>
   );
 }

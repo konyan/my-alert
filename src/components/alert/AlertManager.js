@@ -4,7 +4,7 @@ import Alert from './Alert';
 
 export const AlertContext = createContext();
 
-const AlertProvider = (props) => {
+const AlertManager = (props) => {
   const [state, dispatch] = useReducer((state, action) => {
     switch (action.type) {
       case 'ADD_ALERT':
@@ -29,4 +29,4 @@ const AlertProvider = (props) => {
   );
 };
 
-export default AlertProvider;
+export default AlertManager;

@@ -56,6 +56,7 @@ const Alert = (props) => {
       <span onClick={handleCloseAlert} className='close'>
         X
       </span>
+      <h3>{props.title}</h3>
       <p>{props.message}</p>
       <div className='bar' style={{ width: `${width}%` }}></div>
     </div>

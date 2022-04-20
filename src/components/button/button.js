@@ -1,5 +1,5 @@
 import { useContext, useReducer, useState } from 'react';
-import { AlertContext } from '../alert/AlertProvider';
+import { AlertContext } from '../alert/AlertManager';
 
 const formReducer = (state, event) => {
   return {
@@ -10,7 +10,10 @@ const formReducer = (state, event) => {
 
 const Button = () => {
   const dispatch = useContext(AlertContext);
-  const [formData, setFormData] = useReducer(formReducer, {});
+  const [formData, setFormData] = useReducer(formReducer, {
+    type: 'success',
+    timeLimit: 4,
+  });
 
   console.log('CONTEXT', dispatch);
 

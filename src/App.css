@@ -47,6 +47,13 @@
   }
 }
 
+.alert-item h3 {
+  font-size: 1.4rem;
+  color: black;
+  margin: 0.4rem;
+  font-style: normal;
+}
+
 .alert-item p {
   padding: 0.6rem 0.4rem 0.4rem;
   margin: 0.4rem 0;
