@@ -15,7 +15,7 @@ const Alert = (props) => {
         clearInterval(id);
         return prev;
       });
-    }, 20);
+    }, (props.timeLimit * 1000) / 200);
     console.log('ITER', id);
     setIntervalID(id);
   };
@@ -56,8 +56,8 @@ const Alert = (props) => {
       <span onClick={handleCloseAlert} className='close'>
         X
       </span>
-      <h3>{props.title}</h3>
-      <p>{props.message}</p>
+      <h3>{props.title || 'default title'}</h3>
+      <p>{props.message || 'default message'}</p>
       <div className='bar' style={{ width: `${width}%` }}></div>
     </div>
   );
