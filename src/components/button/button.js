@@ -44,6 +44,14 @@ const Button = () => {
         className='input'
         onChange={setFormData}
       />
+      <label htmlFor='link'>Enter Link</label>
+      <input
+        type='text'
+        value={formData.link || ''}
+        name='link'
+        className='input'
+        onChange={setFormData}
+      />
       <label htmlFor='type'>Alert Type</label>
       <br />
       <select

@@ -58,6 +58,7 @@ const Alert = (props) => {
       </span>
       <h3>{props.title || 'default title'}</h3>
       <p>{props.message || 'default message'}</p>
+      {props.link && <span>{props.link}</span>}
       <div className='bar' style={{ width: `${width}%` }}></div>
     </div>
   );

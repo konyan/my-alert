@@ -59,6 +59,15 @@
   margin: 0.4rem 0;
 }
 
+.alert-item span {
+  color: blue;
+  font-weight: 800;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+  margin-left: 0.5rem;
+  display: block;
+}
+
 .alert-item .bar {
   height: 0.3rem;
 }
